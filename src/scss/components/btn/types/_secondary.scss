@@ -1,0 +1,23 @@
+@if index($btn-types, secondary) {
+  /* == Secondary == */
+  .btn--secondary {
+    &:active {
+      color: #d14a00;
+    }
+
+    // Якщо ефект ховеру підтримується на пристрої, то відпрацюють ось такі стилі
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: #f15c27;
+      }
+    }
+
+    // Якщо кнопка має атрибут disabled
+    &[disabled] {
+      color: #b5b5be;
+    }
+  }
+} @else {
+  @error 'There is no such type. Please add it to the "btn-types" list.';
+}

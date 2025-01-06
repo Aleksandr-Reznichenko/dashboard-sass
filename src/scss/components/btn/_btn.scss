@@ -1,0 +1,48 @@
+// Відповідає за скелет нашої кнопки.
+
+// Набір змінних, в яких ми помітимо спеціальним ключовим словом default,
+// і завдяки цьому ми зможемо при імпорті керувати станом кнопок.
+
+// Settings
+$btn-padding-x: 12px !default; // Горизонтальний внутрішній відступ
+$btn-padding-y: 8px !default; // Вертикальний внутрішній відступ
+$btn-layer-min-width: 32px !default; // Мінімальна ширина
+$btn-layer-min-height: 32px !default; // Мінімальна висота
+$btn-layer-spacing: 0px !default; // Відступ, якщо всередині назви кнопки буде іконка. Тобто відступ між іконкою та назвою кнопки.
+$btn-layer-border-radius: 12px !default; // Заокруглення кнопки
+
+// Набір змінних для управління текстом всередині кнопки
+$btn-text-size: 14px !default;
+$btn-text-weight: 500 !default;
+$btn-line-height: 20px !default;
+$btn-text-spacing: 0.5px !default;
+$btn-text-color: #fafafb !default;
+
+// Button types
+$btn-types: (
+  primary,
+  secondary,
+  default,
+  danger,
+  warning,
+  success,
+  info,
+  // коли немає фону всередині кнопки
+  transparent,
+  frame // кнопка з рамочкою
+);
+
+// Button base styles
+// Стилі (скелет, каркас) кнопок
+@import 'btn-base';
+
+// Button variants
+// Стилі варіантів кнопок
+@import 'types/primary';
+@import 'types/secondary';
+@import 'types/default';
+@import 'types/danger';
+@import 'types/warning';
+@import 'types/success';
+@import 'types/info';
+@import 'types/frame';

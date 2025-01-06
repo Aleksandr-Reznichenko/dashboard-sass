@@ -1,0 +1,25 @@
+@if index($btn-types, frame) {
+  /* == Frame == */
+  .btn--frame {
+    border-color: #f07f2e;
+
+    &:active {
+      border-color: #d14a00;
+    }
+
+    // Якщо ефект ховеру підтримується на пристрої, то відпрацюють ось такі стилі
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        border-color: #f15c27;
+      }
+    }
+
+    // Якщо кнопка має атрибут disabled
+    &[disabled] {
+      background-color: rgba(#b5b5be, 0.5);
+    }
+  }
+} @else {
+  @error 'There is no such type. Please add it to the "btn-types" list.';
+}

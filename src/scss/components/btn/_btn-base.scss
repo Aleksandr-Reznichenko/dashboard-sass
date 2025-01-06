@@ -1,0 +1,40 @@
+// Загальний клас для всіх кнопок з усіма стилями
+
+.btn {
+  display: inline-flex; // Вирівнювання всередині кнопки
+  align-items: center;
+  gap: $btn-layer-spacing;
+
+  min-width: $btn-layer-min-width;
+  min-height: $btn-layer-min-height;
+  padding: $btn-padding-y $btn-padding-x;
+
+  color: $btn-text-color;
+  border-radius: $btn-layer-border-radius;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+
+  // Normalize for tag <button>
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin: 0;
+  overflow: visible;
+  cursor: pointer;
+
+  // Елемент всередині кнопки, для використання тегу <span> для тексту
+  .btn-inner {
+    font-size: $btn-text-size;
+    font-weight: $btn-text-weight;
+    line-height: calc($btn-line-height / $btn-text-size);
+    letter-spacing: #{calc($btn-text-spacing / $btn-text-size)}em;
+  }
+
+  // Якщо всередині кнопки буде іконка
+  .btn-icon {
+    fill: currentColor;
+  }
+}
